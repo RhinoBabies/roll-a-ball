@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Start()
 	{
+		//testing Git changes of version controlled files
 		rb = GetComponent<Rigidbody> (); //grabs reference to this GameObject's Rigidbody component
 	}
 
