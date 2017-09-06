@@ -21,4 +21,13 @@ public class PlayerController : MonoBehaviour {
 
 		rb.AddForce (movement * speed); //when pushing correct keys, adds physics forces to the Rigidbody component for movement
 	}
+
+	void OnTriggerEnter (Collider other)
+	{
+		//Destroy(other.gameObject); //upon collision with another GameObject, the other (and all components/children) would be removed from the scene
+		if(other.gameObject.CompareTag("Pickup"))
+		{
+				other.gameObject.SetActive(false);
+		}
+	}
 }
